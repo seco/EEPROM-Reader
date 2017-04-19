@@ -1,0 +1,287 @@
+**********************************************************************************************
+
+             Read EEPROM from 4096 and list from byte: 0 - 4096
+
+**********************************************************************************************
+
+             testing EEPROM for written bytes
+
+**********************************************************************************************
+
+---------------------------------------------------------------------------------------------|
+                   |  0000000000111111  |                                                    |
+                   |  0123456789012345  |  00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15   |
+---------------------------------------------------------------------------------------------|
+Byte:    0 -   15  |   bd1f2fb6b5c1b16  |  00 62 64 31 66 32 66 62 36 62 35 63 31 62 31 36   |
+Byte:   16 -   31  |  b84d00dca64fcadc  |  62 38 34 64 30 30 64 63 61 36 34 66 63 61 64 63   |
+Byte:   32 -   47  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:   48 -   63  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:   64 -   79  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:   80 -   95  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:   96 -  111  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  112 -  127  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  128 -  143  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  144 -  159  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  160 -  175  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  176 -  191  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  192 -  207  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  208 -  223  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  224 -  239  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  240 -  255  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  256 -  271  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  272 -  287  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  288 -  303  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  304 -  319  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  320 -  335  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  336 -  351  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  352 -  367  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  368 -  383  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  384 -  399  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  400 -  415  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  416 -  431  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  432 -  447  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  448 -  463  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  464 -  479  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  480 -  495  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  496 -  511  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  512 -  527  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  528 -  543  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  544 -  559  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  560 -  575  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  576 -  591  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  592 -  607  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  608 -  623  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  624 -  639  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  640 -  655  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  656 -  671  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  672 -  687  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  688 -  703  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  704 -  719  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  720 -  735  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  736 -  751  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  752 -  767  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  768 -  783  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  784 -  799  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  800 -  815  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  816 -  831  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  832 -  847  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  848 -  863  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  864 -  879  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  880 -  895  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  896 -  911  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  912 -  927  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  928 -  943  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  944 -  959  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  960 -  975  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  976 -  991  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte:  992 - 1007  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1008 - 1023  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1024 - 1039  |   pwned⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  05 70 77 6e 65 64 ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1040 - 1055  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1056 - 1071  |  ⸮ deauther⸮⸮⸮⸮⸮⸮  |  ff 08 64 65 61 75 74 68 65 72 ff ff ff ff ff ff   |
+Byte: 1072 - 1087  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1088 - 1103  |  ⸮⸮ ,         ⸮⸮⸮  |  ff ff 01 2c 01 0a 0f 00 00 01 01 00 00 ff ff ff   |
+Byte: 1104 - 1119  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1120 - 1135  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1136 - 1151  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1152 - 1167  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1168 - 1183  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1184 - 1199  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1200 - 1215  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1216 - 1231  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1232 - 1247  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1248 - 1263  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1264 - 1279  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1280 - 1295  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1296 - 1311  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1312 - 1327  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1328 - 1343  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1344 - 1359  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1360 - 1375  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1376 - 1391  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1392 - 1407  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1408 - 1423  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1424 - 1439  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1440 - 1455  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1456 - 1471  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1472 - 1487  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1488 - 1503  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1504 - 1519  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1520 - 1535  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1536 - 1551  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1552 - 1567  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1568 - 1583  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1584 - 1599  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1600 - 1615  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1616 - 1631  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1632 - 1647  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1648 - 1663  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1664 - 1679  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1680 - 1695  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1696 - 1711  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1712 - 1727  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1728 - 1743  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1744 - 1759  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1760 - 1775  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1776 - 1791  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1792 - 1807  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1808 - 1823  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1824 - 1839  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1840 - 1855  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1856 - 1871  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1872 - 1887  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1888 - 1903  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1904 - 1919  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1920 - 1935  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1936 - 1951  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1952 - 1967  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1968 - 1983  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 1984 - 1999  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2000 - 2015  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2016 - 2031  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2032 - 2047  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮   |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00   |
+Byte: 2048 - 2063  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2064 - 2079  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2080 - 2095  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2096 - 2111  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2112 - 2127  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2128 - 2143  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2144 - 2159  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2160 - 2175  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2176 - 2191  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2192 - 2207  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2208 - 2223  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2224 - 2239  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2240 - 2255  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2256 - 2271  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2272 - 2287  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2288 - 2303  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2304 - 2319  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2320 - 2335  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2336 - 2351  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2352 - 2367  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2368 - 2383  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2384 - 2399  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2400 - 2415  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2416 - 2431  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2432 - 2447  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2448 - 2463  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2464 - 2479  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2480 - 2495  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2496 - 2511  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2512 - 2527  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2528 - 2543  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2544 - 2559  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2560 - 2575  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2576 - 2591  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2592 - 2607  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2608 - 2623  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2624 - 2639  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2640 - 2655  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2656 - 2671  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2672 - 2687  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2688 - 2703  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2704 - 2719  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2720 - 2735  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2736 - 2751  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2752 - 2767  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2768 - 2783  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2784 - 2799  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2800 - 2815  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2816 - 2831  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2832 - 2847  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2848 - 2863  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2864 - 2879  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2880 - 2895  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2896 - 2911  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2912 - 2927  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2928 - 2943  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2944 - 2959  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2960 - 2975  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2976 - 2991  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 2992 - 3007  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3008 - 3023  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3024 - 3039  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3040 - 3055  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3056 - 3071  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3072 - 3087  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3088 - 3103  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3104 - 3119  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3120 - 3135  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3136 - 3151  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3152 - 3167  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3168 - 3183  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3184 - 3199  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3200 - 3215  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3216 - 3231  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3232 - 3247  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3248 - 3263  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3264 - 3279  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3280 - 3295  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3296 - 3311  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3312 - 3327  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3328 - 3343  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3344 - 3359  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3360 - 3375  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3376 - 3391  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3392 - 3407  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3408 - 3423  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3424 - 3439  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3440 - 3455  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3456 - 3471  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3472 - 3487  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3488 - 3503  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3504 - 3519  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3520 - 3535  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3536 - 3551  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3552 - 3567  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3568 - 3583  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3584 - 3599  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3600 - 3615  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3616 - 3631  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3632 - 3647  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3648 - 3663  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3664 - 3679  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3680 - 3695  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3696 - 3711  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3712 - 3727  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3728 - 3743  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3744 - 3759  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3760 - 3775  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3776 - 3791  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3792 - 3807  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3808 - 3823  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3824 - 3839  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3840 - 3855  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3856 - 3871  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3872 - 3887  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3888 - 3903  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3904 - 3919  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3920 - 3935  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3936 - 3951  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3952 - 3967  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3968 - 3983  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 3984 - 3999  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 4000 - 4015  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 4016 - 4031  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 4032 - 4047  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 4048 - 4063  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 4064 - 4079  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+Byte: 4080 - 4095  |  ⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮⸮  |  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   |
+---------------------------------------------------------------------------------------------|
+
+**********************************************************************************************
+
+               empty bytes:   4037
+           not empty bytes:     59
+
+**********************************************************************************************
+
+             EEPROM not empty
+
+**********************************************************************************************
+
+             Ready - You can remove your ESP8266 / LoLin
+
+**********************************************************************************************
+
