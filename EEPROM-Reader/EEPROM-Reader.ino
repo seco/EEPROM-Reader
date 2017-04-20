@@ -33,12 +33,12 @@ void setup()
 
   Serial.println("**********************************************************************************************");
   Serial.println("");
-  Serial.print("             Read EEPROM from ");
+  Serial.print("             EEPROM-sice defined with ");
   Serial.print(sizeBytes);
-  Serial.print(" and list from byte: ");
+  Serial.print(" bytes and list from byte: ");
   Serial.print(startByte);
   Serial.print(" - ");
-  Serial.println(listBytes);
+  Serial.println(listBytes - 1);
   Serial.println("");
   Serial.println("**********************************************************************************************");
   Serial.println("");
